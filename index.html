@@ -6,12 +6,19 @@
     <title>Portfolio - Rahul Rathore</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg_image">
     <header>
         <nav>
             <div>
                 <img alt="Logo"  height="50" src="assets\my_logo.png" width="125"/>
             </div>
+            <button id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -24,7 +31,7 @@
         </nav>
     </header>
 
-    <main>
+    
         <section id="hero" class="hero">
             <img src="assets/myphoto.jpg" alt="Profile Picture" class="profile-pic">
             <h2>Hi, I'm Rahul Rathore</h2>
@@ -36,7 +43,8 @@
                     <div class="word3">UI designer</div>
                 </div>
             </h1> -->
-            <p>A passionate Web Developer,<br>
+            <p>A passionated Data Analyst<br> Web Developer,<br>
+                
             IOT + ML Developer</p>
             <a href="#about" class="btn">Learn More</a>
         </section>
@@ -58,7 +66,7 @@
                 refine my skills, and continue growing as a professional. With a strong passion for problem-solving, <br>
                 AI tools, and creative development, I am eager to explore new challenges and make a significant impact <br>
                 in the tech industry.<br>
-            </p>
+            </p><br>
             <a href="other_pages\resume.html" class="btn" >My Resume</a>
             <a href="https://wa.me/7505238914" class="btn btn-whatsapp">Message Me</a>
         </section>
@@ -158,7 +166,7 @@
         </section>
 
         <section id="activity" class="text-center">
-            <h2>My Activity</h2>
+            <h2>My Activity</h2><br>
             <div class="activity-container">
                 <div class="activity-row">
                     <div class="activity-item">
@@ -225,12 +233,25 @@
             <p>LinkedIn: <a href="https://www.linkedin.com/in/rahulrathore39769">linkedin.com/in/rahulrathore39769</a></p>
             <p>GitHub: <a href="https://github.com/rahulrathore579">github.com/rahulrathore579</a></p>
         </section>
-    </main>
-
-    <footer>
+        <footer>
         <p>&copy; 2025 Rahul Rathore. All rights reserved.</p>
     </footer>
+    
 
-    <script src="script.js"></script>
+    
+
+    <script src="script.js">
+        // Theme Toggle
+document.getElementById('theme-toggle').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+    const toggleImg = document.getElementById('toggle-img');
+    if (document.body.classList.contains('dark-mode')) {
+        toggleImg.src = 'assets/kdjimage2.png'; // Dark mode icon
+    } else {
+        toggleImg.src = 'assets/ijbhdmage1.png'; // Light mode icon
+    }
+});
+
+    </script>
 </body>
 </html>
